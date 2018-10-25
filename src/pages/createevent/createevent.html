@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Create Event</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div text-center>Estimasikan kondisi eventmu</div>
+  <ion-list>
+      <ion-item>
+        <ion-label floating>Estimasi Jumlah Peserta</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+          <ion-label>Jenis Event</ion-label>
+          <ion-select [(ngModel)]="eventType" interface="popover">
+            <ion-option value="Lainnya">Lainnya</ion-option>
+            <ion-option value="Birthday">Birthday</ion-option>
+            <ion-option value="Convention">Convention</ion-option>
+            <ion-option value="Exhibition">Exhibition</ion-option>
+            <ion-option value="Exhibition">Festival</ion-option>
+            <ion-option value="Exhibition">Konser</ion-option>
+            <ion-option value="Kompetisi">Kompetisi</ion-option>
+            <ion-option value="Exhibition">Perpisahan</ion-option>
+            <ion-option value="Seminar">Seminar</ion-option>
+            <ion-option value="Wedding">Wedding</ion-option>
+          </ion-select>
+      </ion-item>
+
+      <ion-item>
+          <ion-label>Lokasi Event</ion-label>
+          <ion-select [(ngModel)]="eventLocation" interface="popover">
+            <ion-option value="Bogor Utara">Bogor Utara</ion-option>
+            <ion-option value="Bogor Timur">Bogor Timur</ion-option>
+            <ion-option value="Bogor Selatan">Bogor Selatan</ion-option>
+            <ion-option value="Bogor Barat">Bogor Barat</ion-option>
+            <ion-option value="Bogor Tengah">Bogor Tengah</ion-option>
+            <ion-option value="Tanah Sereal">Tanah Sereal</ion-option>
+          </ion-select>
+      </ion-item>
+      
+  </ion-list>
+  <br>
+  <ion-row>
+      <ion-col>
+          <button color="eventarichPink" ion-button (click)="submit()" block>Kirim</button>
+      </ion-col>
+  </ion-row>
+
+</ion-content>

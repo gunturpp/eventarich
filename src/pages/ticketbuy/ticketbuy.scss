@@ -1,0 +1,24 @@
+page-ticketbuy {
+    .invisibleButton {
+        height:10px;
+        width:60px;
+    }
+
+    .buttonTicket{
+        border: solid 1px rgb(128, 128, 128);
+        border-radius: 10%;
+        padding: 0.5em;
+    }
+
+    .ticketLayout{
+        margin-top: 0.5em;
+    }
+    .ticketNumber{
+        margin-top: 0.25em;
+        font-size: 1.25em;
+    }
+
+    .footer{
+        padding: 0.5em;
+    }
+}

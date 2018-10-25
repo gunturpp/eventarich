@@ -1,0 +1,76 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Beli Tiket</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nama Depan</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Nama Belakang</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Nomor Telepon</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+      <div>Kuantitas</div>
+      <ion-grid no-padding text-center class="ticketLayout">          
+        <ion-row no-padding>
+          <ion-col col-2 no-padding>
+          </ion-col>    
+          <ion-col col-2 no-padding>
+            <div (click)="subTicket()" class="buttonTicket">-</div>
+          </ion-col>
+          <ion-col col-4 no-padding text-center>
+            <div class="ticketNumber">{{ticketQuantity}}</div>
+          </ion-col>
+          <ion-col col-2 no-padding text-center>
+            <div (click)="addTicket()" class="buttonTicket">+</div>  
+          </ion-col>
+          <ion-col col-2 no-padding>
+          </ion-col>    
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item no-lines>
+      <ion-grid no-padding text-center class="ticketLayout">          
+        <ion-row no-padding>
+          <ion-col col-2 no-padding>
+            <div>Total</div>
+          </ion-col>    
+          <ion-col col-10 no-padding text-right>
+            {{finalPrice}}
+          </ion-col>    
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+
+
+  </ion-list>
+
+</ion-content>
+
+<ion-footer text-center class="footer">
+    <button outline ion-button block (click)='pay()'>Lanjut Pembayaran</button>
+</ion-footer>

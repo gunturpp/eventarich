@@ -1,0 +1,77 @@
+page-home {
+    .ButtonRight{
+        font-size: 2em;
+        position: relative;
+        top: 0.15em;
+        right: 0.25em;
+        color: white;   
+    }
+
+    .title{
+        position: relative;
+        top: 0.35em;
+    }
+
+    .imageCard{
+        width: 100%;
+        max-height: 70vw;
+        border-top-left-radius: 2%; 
+        border-top-right-radius: 2%; 
+        margin-bottom: -0.25em;
+    }
+
+    .card{
+        margin: 1.5em;    
+        box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.35);
+        border-radius: 2%; 
+    }
+
+    .dateCardLayout{
+        padding: 0.5em;
+        padding-top: 30%;
+        background-color: rgba(128, 128, 128, 0.1);
+        border-bottom-left-radius: 2%; 
+        height: 100%;
+    }
+
+    .dateCard{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .cardContent{
+        padding: 0.5em;
+    }
+
+    .eventName{
+        font-size: 1.25em;
+    }
+
+    .eventCreator{
+        margin: 0.5em 0;
+    }
+
+    .iconMini{
+        position: relative;
+        top: 0.1em;
+        color: gray;
+        font-size: 1em;
+    }
+
+    .customMiniIcon{
+
+        position: relative;
+        top: 0.05em;
+        color: gray;
+        font-size: 1em;
+    }
+
+    .littleSpace{
+        margin-left: 0.1em;
+        margin-right: 0.075em;
+    }
+
+    .break{
+        margin-top: 0.5em
+    }
+}

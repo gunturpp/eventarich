@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Event Detail</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <img class="imageCard" src="assets/pict/HomeSlide.png"/>
+  <div class="contentSpace">
+    <ion-grid no-padding>          
+      <ion-row no-padding>
+        <ion-col col-10 no-padding>
+          <div class="eventName">
+            Nama Event
+          </div>
+          <div>
+            Creator Event
+          </div>
+        </ion-col>
+        <ion-col col-2 no-padding text-center>
+          <div class="eventPriceFree">
+            Free        
+          </div>    
+          <!-- <div class="eventPrice">
+            100K        
+          </div>     -->
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <br>
+    <div class="miniContent"><ion-icon name="md-pin" class="iconMini littleSpace"></ion-icon>&nbsp; event venue</div>
+    <div><ion-icon name="md-time" class="iconMini"></ion-icon>&nbsp; event time</div> 
+
+    <br>
+
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum assumenda libero iure explicabo laboriosam quia magni, itaque eius odit. Nesciunt, similique? Labore repellendus soluta doloribus assumenda earum non alias.</div>
+    
+    <br>
+    <div><span class="customMiniIcon littleSpace">#</span>&nbsp; <i>eventTag, eventTag, eventTag</i></div>       
+  </div>
+</ion-content>
+
+<ion-footer text-center class="footer">
+    <button outline ion-button block (click)='order()'>Beli Tiket</button>
+</ion-footer>

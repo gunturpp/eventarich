@@ -1,0 +1,59 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Pilih Paket</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div text-center>Pilih paket yang paling sesuai dengan eventmu</div>
+
+    <div class="packetCardEkslusif" (click)="toCustomize()">
+      <ion-grid no-padding>          
+        <ion-row no-padding>
+          <ion-col col-11 class="contentLayout">
+            <div class="packetName">Paket A</div>
+            <div class="packetLevel">ekslusif</div>
+            <div class="packetPriceLayout"><span class="packetPriceEkslusif">max Rp.45.000.000,-</span></div>
+          </ion-col>
+          <ion-col col-1 no-padding text-center>
+            <ion-icon name="ios-arrow-forward-outline" class="iconArrow"></ion-icon> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    
+    <div class="packetCardNormal">
+      <ion-grid no-padding>          
+        <ion-row no-padding>
+          <ion-col col-11 class="contentLayout">
+            <div class="packetName">Paket B</div>
+            <div class="packetLevel">Normal</div>
+            <div class="packetPriceLayout"><span class="packetPriceNormal">max Rp.25.000.000,-</span></div>
+          </ion-col>
+          <ion-col col-1 no-padding text-center>
+            <ion-icon name="ios-arrow-forward-outline" class="iconArrow"></ion-icon> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    
+    <div class="packetCardHemat">
+      <ion-grid no-padding>          
+        <ion-row no-padding>
+          <ion-col col-11 class="contentLayout">
+            <div class="packetName">Paket C</div>
+            <div class="packetLevel">Hemat</div>
+            <div class="packetPriceLayout"><span class="packetPriceHemat">max Rp.10.000.000,-</span></div>
+          </ion-col>
+          <ion-col col-1 no-padding text-center>
+            <ion-icon name="ios-arrow-forward-outline" class="iconArrow"></ion-icon> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+</ion-content>

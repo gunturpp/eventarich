@@ -1,0 +1,125 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Pembayaran</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div text-center>Pilih metode pembayaran</div>
+
+  <ion-grid text-center class="methodLayout" (click)="toggleBank()">          
+    <ion-row no-padding text-center>
+      <ion-col col-2 no-padding>
+        <ion-icon name="md-cash" class="iconBank"></ion-icon>
+      </ion-col>   
+      <ion-col col-8 no-padding text-left>
+        <div class="methodName">Transfer Bank</div>
+      </ion-col>    
+      <ion-col col-2 no-padding>
+        <ion-icon *ngIf="!isBank" name="ios-arrow-down-outline" class="iconArrow"></ion-icon>
+        <ion-icon *ngIf="isBank" name="ios-arrow-up-outline" class="iconArrow"></ion-icon>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+
+  <ion-list *ngIf="isBank" radio-group [(ngModel)]="bankChoosen">
+    <ion-item>
+      <ion-label>BCA</ion-label>
+      <ion-radio value="BCA" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>BRI</ion-label>
+      <ion-radio value="BRI"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Mandiri</ion-label>
+      <ion-radio value="Mandiri" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>BNI</ion-label>
+      <ion-radio value="BNI" [disabled]="isDisabled"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  
+  <ion-grid text-center class="methodLayout" (click)="toggleCredit()">  
+    <ion-row no-padding text-center>
+      <ion-col col-2 no-padding>
+        <ion-icon name="md-card" class="iconBank"></ion-icon>
+      </ion-col>   
+      <ion-col col-8 no-padding text-left>
+        <div class="methodName">Kartu Kredit</div>
+      </ion-col>    
+      <ion-col col-2 no-padding>
+        <ion-icon *ngIf="!isCredit" name="ios-arrow-down-outline" class="iconArrow"></ion-icon>
+        <ion-icon *ngIf="isCredit" name="ios-arrow-up-outline" class="iconArrow"></ion-icon>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+
+  <ion-list *ngIf="isCredit" radio-group [(ngModel)]="bankChoosen">
+    <ion-item>
+      <ion-label>Kredivo</ion-label>
+      <ion-radio value="Kredivo" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Jenius</ion-label>
+      <ion-radio value="Jenius"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid text-center class="methodLayout" (click)="toggleGopay()">  
+    <ion-row no-padding text-center>
+      <ion-col col-2 no-padding> 
+        <img class="iconGopay" src="assets/pict/gopay.jpg"/>
+      </ion-col>   
+      <ion-col col-8 no-padding text-left>
+        <div class="methodName">Gopay</div>
+      </ion-col>    
+      <ion-col col-2 no-padding>
+        <ion-icon *ngIf="!isGopay" name="ios-arrow-down-outline" class="iconArrow"></ion-icon>
+        <ion-icon *ngIf="isGopay" name="ios-arrow-up-outline" class="iconArrow"></ion-icon>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid text-center class="methodLayout" (click)="toggleOvo()">  
+    <ion-row no-padding text-center>
+      <ion-col col-2 no-padding> 
+        <img class="iconGopay" src="assets/pict/ovo.jpg"/>
+      </ion-col>   
+      <ion-col col-8 no-padding text-left>
+        <div class="methodName">Ovo</div>
+      </ion-col>    
+      <ion-col col-2 no-padding>
+        <ion-icon *ngIf="!isOvo" name="ios-arrow-down-outline" class="iconArrow"></ion-icon>
+        <ion-icon *ngIf="isOvo" name="ios-arrow-up-outline" class="iconArrow"></ion-icon>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid text-center class="methodLayout" (click)="toggleIndomaret()">  
+    <ion-row no-padding text-center>
+      <ion-col col-2 no-padding> 
+        <img class="iconGopay" src="assets/pict/indomaret.png"/>
+      </ion-col>   
+      <ion-col col-8 no-padding text-left>
+        <div class="methodName">Indomaret</div>
+      </ion-col>    
+      <ion-col col-2 no-padding>
+        <ion-icon *ngIf="!isIndomaret" name="ios-arrow-down-outline" class="iconArrow"></ion-icon>
+        <ion-icon *ngIf="isIndomaret" name="ios-arrow-up-outline" class="iconArrow"></ion-icon>
+      </ion-col>    
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+
+<ion-footer text-center class="footer">
+  <button outline ion-button block (click)='pay()'>Bayar</button>
+</ion-footer>
+

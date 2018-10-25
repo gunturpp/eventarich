@@ -1,0 +1,55 @@
+page-login {
+    .logo{
+        display: block;
+        margin: auto;
+        height: 25vh;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    .Warning{
+        font-style: italic;
+        color: red;
+    }
+
+    .icon{
+        font-size: 2em;
+        float: left;
+        color: rgba(71, 71, 71, 0.7)
+    }
+
+    .Head {
+        font-size: 1em;
+    }
+
+    .Head2 {
+        font-size: 1em;
+    }
+
+    .item-md {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .lupaPass{
+        font-size: 1em;
+        color: #ff1493;
+        font-weight: bold;
+    }
+    
+    .tombol{
+        height: 2em !important;
+        position: relative;
+        top: 1em;
+    }
+
+    .buat{
+        color: #ff1493;
+        font-weight: bold;
+    }
+
+    .registerLayout{
+        background-color: #f0ecec;
+        margin: 0 2.5vw;
+    }
+
+}

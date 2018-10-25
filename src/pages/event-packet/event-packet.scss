@@ -1,0 +1,72 @@
+page-event-packet {
+    .invisibleButton {
+        height:10px;
+        width:60px;
+    }
+
+    .packetName{
+        font-size: 1.5em;
+        font-weight: bold;
+        margin: 0.25em;
+    }
+
+    .packetLevel{
+        font-size: 1.25em;
+        margin: 0.25em;
+    }
+
+    .packetPriceEkslusif{
+        background-color: #ff1493;
+        color: white;
+        padding: 0.15em 0.35em;
+        font-size: 1.25em;
+        border-radius: 0.25em;
+    }
+    .packetPriceNormal{
+        background-color: #0166fe;
+        color: white;
+        padding: 0.15em 0.35em;
+        font-size: 1.25em;
+        border-radius: 0.25em;
+    }
+    .packetPriceHemat{
+        background-color: #00be6f;
+        color: white;
+        padding: 0.15em 0.35em;
+        font-size: 1.25em;
+        border-radius: 0.25em;
+    }
+
+    .packetPriceLayout{
+        margin: 0.25em;
+        margin-top: 0.5em;
+    }
+
+    .iconArrow{
+        font-size: 2em;
+        color: gray;
+        position: relative;
+        top: 35%;
+    }
+
+    .packetCardEkslusif{
+        border: #ff1493 solid 2px;
+        border-radius: 1em;
+        padding: 0.5em;
+        margin-top: 1em;
+    }
+
+    .packetCardNormal{
+        border: #0166fe solid 2px;
+        border-radius: 1em;
+        padding: 0.5em;
+        margin-top: 1em;
+    }
+
+    .packetCardHemat{
+        border: #00be6f solid 2px;
+        border-radius: 1em;
+        padding: 0.5em;
+        margin-top: 1em;
+    }
+}

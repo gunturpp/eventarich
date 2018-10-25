@@ -1,0 +1,61 @@
+<ion-header>
+
+    <ion-navbar color="eventarichPink" text-center>
+        <ion-title><span class="Title">Upload Event</span></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<img *ngIf="!image" (click)="updatePicture()" class="image" src="assets/pict/stock.png"/>
+<img *ngIf="image" (click)="changePicture()" class="image" [src]="image"/>
+
+<ion-list>
+    <ion-item>
+        <ion-label stacked>Nama Event</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Tanggal Pelaksanaan</ion-label>
+        <ion-input type="date" min="{{minDate}}" [(ngModel)]="date"></ion-input>
+    </ion-item>
+
+    
+    <ion-item>
+        <ion-label stacked>Waktu Pelaksanaan</ion-label>
+        <ion-input type="time" min="{{time}}" [(ngModel)]="time"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+        <ion-label stacked>Kota</ion-label>
+        <ion-input type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Deskripsi</ion-label>
+        <ion-textarea class="Content" [(ngModel)]="explanation" name="address" type="text" #alamat="ngModel" required autosize></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <ion-label stacked>Harga Tiket (Rp)</ion-label>
+        <ion-input type="number" placeholder="0 untuk gratis"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Kategori</ion-label>
+        <ion-select [(ngModel)]="paket" interface="popover">
+        <ion-option value="paket1">Kategori 1</ion-option>
+        <ion-option value="paket2">Kategori 2</ion-option>
+        <ion-option value="paket3">Kategori 3</ion-option>
+        </ion-select>
+    </ion-item>
+    <br>
+    <ion-row>
+        <ion-col>
+            <button ion-button block (click)='upload()'>Unggah</button>
+        </ion-col>
+    </ion-row>
+</ion-list>
+</ion-content>

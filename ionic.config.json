@@ -1,0 +1,7 @@
+{
+  "name": "eventarich",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

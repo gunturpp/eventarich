@@ -1,0 +1,61 @@
+<ion-content>
+
+  <img class="logo" src="assets/pict/logo.png"/>
+  <form #loginForm="ngForm" novalidate>
+    <div padding>
+      <ion-list >
+        <ion-item>
+          <ion-label floating><p class="Head">Email</p></ion-label>
+          <ion-input class="Head2" [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"
+            required>
+          </ion-input>
+        </ion-item>
+        <p ion-text [hidden]="user.valid || submitted == false" color="light" padding-left class="Warning">
+        Email harus diisi
+        </p>
+
+        <ion-item>
+          <ion-label floating><p class="Head">Password</p></ion-label>
+          
+          
+          <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>
+          </ion-input>
+          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
+          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
+          
+
+        </ion-item>
+        
+        <p ion-text [hidden]="pass.valid || submitted == false" color="light" padding-left class="Warning">
+          Password harus diisi
+        </p>
+      </ion-list>
+
+      <ion-row>
+        <ion-col>
+          <button class="ButtonMasuk" color="eventarichPink" ion-button (click)="masuk(loginForm)" block><p class="ButtonWord">Masuk</p></button>
+        </ion-col>
+      </ion-row>
+
+    </div>
+    <ion-grid no-padding>    
+      <ion-row>
+        <ion-col text-center><a (click)="comingSoon()" class="lupaPass">LUPA KATA SANDI?</a></ion-col>
+      </ion-row>
+      
+    </ion-grid>
+
+  </form>
+</ion-content>
+
+
+<ion-footer text-center class="footer">
+  <ion-row class="registerLayout" no-padding>
+    <ion-col text-center no-padding>
+      <p class="Head">
+        Belum punya akun?
+        <a class="Link" (click)="daftar()" class="buat"> Daftar</a>
+      </p>
+    </ion-col>
+  </ion-row>
+</ion-footer>

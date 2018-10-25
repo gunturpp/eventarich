@@ -1,0 +1,104 @@
+<ion-header>
+
+  <ion-navbar color="eventarichPink" text-center>
+      <ion-title><span class="Title">Paket A</span><button ion-button clear class="invisibleButton"></button></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div text-center>Sesuaikan kebutuhan eventmu</div>
+  
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/venue.png"/>Venue
+      </ion-label>
+      <ion-select [(ngModel)]="venueChoosen" interface="popover" (ionChange)="venueUpdate()">
+        <ion-option value="GWW">GWW | 5jt</ion-option>
+        <ion-option value="Audit Mandiri">Audit Mandiri | 500K</ion-option>
+        <ion-option value="Audit AHN">Audit AHN | 1jt</ion-option>
+        <ion-option value="Hotel Duta Berlian">Hotel Duta Berlian | 7jt</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/sound.png"/>Sound System
+      </ion-label>
+      <ion-select [(ngModel)]="soundChoosen" interface="popover" (ionChange)="soundUpdate()">
+        <ion-option value="A">A | 15jt</ion-option>
+        <ion-option value="B">B | 7,5jt</ion-option>
+        <ion-option value="C">C | 5jt</ion-option>
+        <ion-option value="-">-</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/multimedia.png"/>Projector
+      </ion-label>
+      <ion-select [(ngModel)]="projectorChoosen" interface="popover" (ionChange)="projectorUpdate()">
+          <ion-option value="A">A | 5jt</ion-option>
+          <ion-option value="B">B | 2,5jt</ion-option>
+          <ion-option value="C">C | 500K</ion-option>
+          <ion-option value="-">-</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/chair.png"/>Kursi
+      </ion-label>
+      <ion-select [(ngModel)]="chairChoosen" interface="popover" (ionChange)="chairUpdate()">
+          <ion-option value="1000">1000</ion-option>
+          <ion-option value="500">500</ion-option>
+          <ion-option value="250">250</ion-option>
+          <ion-option value="125">125</ion-option>
+          <ion-option value="-">-</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/table.png"/>Meja
+      </ion-label>
+      <ion-select [(ngModel)]="tableChoosen" interface="popover" (ionChange)="tableUpdate()">
+          <ion-option value="100">100</ion-option>
+          <ion-option value="50">50</ion-option>
+          <ion-option value="25">25</ion-option>
+          <ion-option value="10">10</ion-option>
+          <ion-option value="-">-</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>
+        <img class="icon" src="assets/pict/stage.png"/>Panggung
+      </ion-label>
+      <ion-select [(ngModel)]="stageChoosen" interface="popover" (ionChange)="stageUpdate()">
+          <ion-option value="A">A | 50jt</ion-option>
+          <ion-option value="B">B | 25jt</ion-option>
+          <ion-option value="C">C | 12,5jt</ion-option>
+          <ion-option value="-">-</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item no-lines>
+    <ion-grid no-padding text-center class="ticketLayout">          
+      <ion-row no-padding>
+        <ion-col col-2 no-padding>
+          <div>Total</div>
+        </ion-col>    
+        <ion-col col-10 no-padding text-right>
+          {{finalPrice}}
+        </ion-col>    
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+</ion-content>
+
+<ion-footer text-center class="footer">
+    <button outline ion-button block (click)='pay()'>Lanjut Pembayaran</button>
+</ion-footer>
