@@ -12,7 +12,7 @@ export class AuthProvider {
   emailLogin(email, password) {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(success => {
-        localStorage.setItem("currentUser", firebase.auth().currentUser.uid);
+        localStorage.setItem("isLoggedin", "1");
       })
       .catch(error => {
       });
