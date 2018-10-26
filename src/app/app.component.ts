@@ -14,17 +14,21 @@ import { TabsPage } from '../pages/tabs/tabs';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
-  rootPage: any = LoginPage;
-
+  rootPage: any;
+  
   pages: Array<{title: string, component: any}>;
-
+  
   constructor(
     public platform: Platform, 
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen) {
-    this.initializeApp();
-
+      this.initializeApp();
+      if(localStorage.getItem("isLoggedin") == "1"){
+        this.rootPage = HomePage;
+      } else {
+        this.rootPage = LoginPage;
+      }
+      
   }
 
   initializeApp() {
