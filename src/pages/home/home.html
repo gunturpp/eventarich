@@ -1,50 +1,58 @@
 <ion-header>
-  <ion-toolbar color="eventarichPink" text-center>
-    <ion-buttons start>
-      <button ion-button icon-only color="royal">
+    <ion-toolbar color="eventarichPink" text-center>
+        <ion-buttons start>
+            <button ion-button icon-only color="royal">
         <ion-icon name="list"></ion-icon>
       </button>
-    </ion-buttons>
-    <ion-title>Eventarich</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only color="royal">
+        </ion-buttons>
+        <ion-title>Eventarich</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only color="royal">
         <ion-icon name="contact"></ion-icon>
       </button>
-    </ion-buttons>
-  </ion-toolbar>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content padding="">
-  <div class="center">
-    <img (click)="toCreate()" src="assets/imgs/add-event.png">
-  </div>
-  <div class="all-category">
-    <div class="event-content">
-      <h4>Birthday</h4>
-      <div class="event-percategory">
-        <div class="poster">
-          <img class="event-image" src="assets/pict/HomeSlide.png">
-          <div class="event-title">
-            <p>Wkwkwkwkw wkwk wkwkwkw</p>
-          </div>
-        </div>
-  
-        <div class="poster">
-          <img class="event-image" src="assets/pict/HomeSlide.png">
-          <div class="event-title">
-            <p>Wkwkwkwkw wkwk wkwkwkw</p>
-          </div>
-        </div>
-
-        <div class="poster">
-          <img class="event-image" src="assets/pict/HomeSlide.png">
-          <div class="event-title">
-            <p>Wkwkwkwkw wkwk wkwkwkw</p>
-          </div>
-        </div>
-  
-
-      </div>
+    <div class="center">
+        <img (click)="toCreate()" src="assets/imgs/add-event.png">
     </div>
-  </div>
+    <div class="all-category">
+        <div class="event-content">
+            <h4>Birthday</h4>
+            <div class="event-percategory">
+                <div class="poster">
+                    <img class="event-image" src="assets/pict/HomeSlide.png">
+                    <div class="event-title">
+                        <p>Wkwkwkwkw wkwk wkwkwkw</p>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <img class="event-image" src="assets/pict/HomeSlide.png">
+                    <div class="event-title">
+                        <p>Wkwkwkwkw wkwk wkwkwkw</p>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <img class="event-image" src="assets/pict/HomeSlide.png">
+                    <div class="event-title">
+                        <p>Wkwkwkwkw wkwk wkwkwkw</p>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <ion-fab *ngIf="role == 'admin'" bottom right>
+        <button ion-fab color="primary"><ion-icon name="apps"></ion-icon></button>
+        <ion-fab-list side="top">
+            <button (click)="goToAdmin()" ion-fab><ion-icon name="add"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
 </ion-content>

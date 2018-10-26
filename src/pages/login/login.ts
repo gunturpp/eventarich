@@ -16,7 +16,7 @@ export class LoginPage {
   lihat = true;
   status = "password";
   email: any;
-  login: any;
+  password: any;
 
   constructor(
     public navCtrl: NavController, 
@@ -87,7 +87,8 @@ export class LoginPage {
       loading.present();    
 
       setTimeout(() => { 
-        this.auth.emailLogin(this.email,this.login)
+        this.auth.emailLogin(this.email,this.password)
+        this.navCtrl.setRoot(HomePage)
         loading.dismiss();     
       }, 2000);
     }

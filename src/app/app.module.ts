@@ -6,6 +6,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import * as firebase from 'firebase';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +34,8 @@ import { CustomizeItemPage } from '../pages/customize-item/customize-item';
 import { BookingListPage } from '../pages/booking-list/booking-list';
 import { DataProvider } from '../providers/data/data';
 import { AuthProvider } from '../providers/auth/auth';
-var config = {
+import { AdminPage } from '../pages/admin/admin';
+var firebaseConfig = {
   apiKey: "AIzaSyA6MFiysRgIRrzjXZwZ_aKx_NBdeJ1mzp4",
   authDomain: "eventarich-28626.firebaseapp.com",
   databaseURL: "https://eventarich-28626.firebaseio.com",
@@ -39,9 +44,10 @@ var config = {
   messagingSenderId: "1082957248995"
 };
 
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 @NgModule({
   declarations: [
+    AdminPage,
     BookingListPage,
     PacketPage,
     CustomizeItemPage,
@@ -61,18 +67,21 @@ firebase.initializeApp(config);
     EventPacketCustomizePage,
     EventSearchPage,
     ProfilePage,
-
     TabsPage,
-
-    
     Autosize
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    AdminPage,
     BookingListPage,
     PacketPage,
     CustomizeItemPage,

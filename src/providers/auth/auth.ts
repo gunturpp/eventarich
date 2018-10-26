@@ -13,8 +13,10 @@ export class AuthProvider {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(success => {
         localStorage.setItem("isLoggedin", "1");
+        localStorage.setItem("currentUser", JSON.stringify(firebase.auth().currentUser));
       })
       .catch(error => {
+        alert(error.message)
       });
   }
   // register new account to firebase

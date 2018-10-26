@@ -8,6 +8,7 @@ import { ListPage } from '../pages/list/list';
 import { OnboardingPage } from '../pages/onboarding/onboarding';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs';
+import { AdminPage } from '../pages/admin/admin';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +25,7 @@ export class MyApp {
     public splashScreen: SplashScreen) {
       this.initializeApp();
       if(localStorage.getItem("isLoggedin") == "1"){
-        this.rootPage = HomePage;
+        this.rootPage = AdminPage;
       } else {
         this.rootPage = LoginPage;
       }
