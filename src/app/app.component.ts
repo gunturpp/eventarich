@@ -15,7 +15,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = OnboardingPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -24,14 +24,6 @@ export class MyApp {
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen) {
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Kebutuhan Event', component: ListPage },
-      { title: 'Vendor Kami', component: ListPage },
-      { title: 'Profile', component: ListPage }
-    ];
 
   }
 

@@ -1,97 +1,50 @@
 <ion-header>
-  <ion-navbar color="eventarichPink">
-    <ion-grid no-padding>          
-      <ion-row no-padding>
-        <ion-col col-2 no-padding>
-          <button ion-button menuToggle>
-          </button>           
-        </ion-col>
-        <ion-col col-8 no-padding text-center>    
-          <ion-title class="title">Eventarich</ion-title>        
-        </ion-col>
-        <ion-col col-2 text-right no-padding>
-          <ion-icon color="dark" class="ButtonRight" name="md-chatboxes"></ion-icon>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-navbar>
+  <ion-toolbar color="eventarichPink" text-center>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="list"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Eventarich</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-  <div class="card" (click)="openDetail()">  
-    <img class="imageCard" src="assets/pict/HomeSlide.png"/>
-    <ion-grid no-padding>          
-      <ion-row no-padding>
-        <ion-col col-3 no-padding text-center>
-          <div class="dateCardLayout">
-            <div class="dateCard">28</div>
-            <div class="monthCard">Feb</div>
-            <hr>
-            <div><b>Free</b></div>
-          </div>
-        </ion-col>
-        <ion-col col-9 no-padding>
-          <div class="cardContent">
-            <div class="eventName"><b>event name</b></div>
-            <div class="eventCreator">event creator</div>
-            <div class="miniContent"><ion-icon name="md-pin" class="iconMini littleSpace"></ion-icon>&nbsp; event venue</div>
-            <div><ion-icon name="md-time" class="iconMini"></ion-icon>&nbsp; event time</div>        
-            <div><span class="customMiniIcon littleSpace">#</span>&nbsp; <i>eventTag, eventTag, eventTag</i></div>        
-          </div>    
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+<ion-content padding="">
+  <div class="center">
+    <img (click)="toCreate()" src="assets/imgs/add-event.png">
   </div>
+  <div class="all-category">
+    <div class="event-content">
+      <h4>Birthday</h4>
+      <div class="event-percategory">
+        <div class="poster">
+          <img class="event-image" src="assets/pict/HomeSlide.png">
+          <div class="event-title">
+            <p>Wkwkwkwkw wkwk wkwkwkw</p>
+          </div>
+        </div>
   
-  <div class="card" (click)="openDetail()">  
-      <img class="imageCard" src="assets/pict/HomeSlide.png"/>
-      <ion-grid no-padding>          
-        <ion-row no-padding>
-          <ion-col col-3 no-padding text-center>
-            <div class="dateCardLayout">
-              <div class="dateCard">28</div>
-              <div class="monthCard">Feb</div>
-              <hr>
-              <div><b>Free</b></div>
-            </div>
-          </ion-col>
-          <ion-col col-9 no-padding>
-            <div class="cardContent">
-              <div class="eventName"><b>event name</b></div>
-              <div class="eventCreator">event creator</div>
-              <div class="miniContent"><ion-icon name="md-pin" class="iconMini littleSpace"></ion-icon>&nbsp; event venue</div>
-              <div><ion-icon name="md-time" class="iconMini"></ion-icon>&nbsp; event time</div>        
-              <div><span class="customMiniIcon littleSpace">#</span>&nbsp; <i>eventTag, eventTag, eventTag</i></div>        
-            </div>    
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
+        <div class="poster">
+          <img class="event-image" src="assets/pict/HomeSlide.png">
+          <div class="event-title">
+            <p>Wkwkwkwkw wkwk wkwkwkw</p>
+          </div>
+        </div>
 
-    
-  <div class="card" (click)="openDetail()">  
-      <img class="imageCard" src="assets/pict/HomeSlide.png"/>
-      <ion-grid no-padding>          
-        <ion-row no-padding>
-          <ion-col col-3 no-padding text-center>
-            <div class="dateCardLayout">
-              <div class="dateCard">28</div>
-              <div class="monthCard">Feb</div>
-              <hr>
-              <div><b>Free</b></div>
-            </div>
-          </ion-col>
-          <ion-col col-9 no-padding>
-            <div class="cardContent">
-              <div class="eventName"><b>event name</b></div>
-              <div class="eventCreator">event creator</div>
-              <div class="miniContent"><ion-icon name="md-pin" class="iconMini littleSpace"></ion-icon>&nbsp; event venue</div>
-              <div><ion-icon name="md-time" class="iconMini"></ion-icon>&nbsp; event time</div>        
-              <div><span class="customMiniIcon littleSpace">#</span>&nbsp; <i>eventTag, eventTag, eventTag</i></div>        
-            </div>    
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+        <div class="poster">
+          <img class="event-image" src="assets/pict/HomeSlide.png">
+          <div class="event-title">
+            <p>Wkwkwkwkw wkwk wkwkwkw</p>
+          </div>
+        </div>
+  
+
+      </div>
     </div>
+  </div>
 </ion-content>

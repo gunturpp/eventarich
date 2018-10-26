@@ -1,0 +1,18 @@
+page-customize-item {
+    .total {
+        font-size: 1.4em;
+        font-weight:bold;
+        background-color: rgba(156, 140, 140, 0.2);
+        padding: 10px;
+    }
+    .total-sub {
+        float: right;
+    }
+    .btn-btm {
+        position: fixed;
+        bottom: 0;
+        width: 90%;
+        background-color: white;
+
+    }
+}

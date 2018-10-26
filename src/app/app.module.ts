@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import * as firebase from 'firebase';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,9 +25,26 @@ import { EventPacketPage } from '../pages/event-packet/event-packet';
 import { EventPacketCustomizePage } from '../pages/event-packet-customize/event-packet-customize';
 import { EventSearchPage } from '../pages/event-search/event-search';
 import { ProfilePage } from '../pages/profile/profile';
+import { PacketPage } from '../pages/packet/packet';
+import { CustomizeItemPage } from '../pages/customize-item/customize-item';
+import { BookingListPage } from '../pages/booking-list/booking-list';
+import { DataProvider } from '../providers/data/data';
+import { AuthProvider } from '../providers/auth/auth';
+var config = {
+  apiKey: "AIzaSyA6MFiysRgIRrzjXZwZ_aKx_NBdeJ1mzp4",
+  authDomain: "eventarich-28626.firebaseapp.com",
+  databaseURL: "https://eventarich-28626.firebaseio.com",
+  projectId: "eventarich-28626",
+  storageBucket: "eventarich-28626.appspot.com",
+  messagingSenderId: "1082957248995"
+};
 
+firebase.initializeApp(config);
 @NgModule({
   declarations: [
+    BookingListPage,
+    PacketPage,
+    CustomizeItemPage,
     MyApp,
     HomePage,
     ListPage,
@@ -55,6 +73,9 @@ import { ProfilePage } from '../pages/profile/profile';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
+    BookingListPage,
+    PacketPage,
+    CustomizeItemPage,
     MyApp,
     HomePage,
     ListPage,
@@ -79,7 +100,9 @@ import { ProfilePage } from '../pages/profile/profile';
     SplashScreen,
     StatusBar,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DataProvider,
+    AuthProvider
   ]
 })
 export class AppModule {}

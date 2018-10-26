@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, AlertController, ActionSheetController, App } from 'ionic-angular';
 import { Camera, CameraOptions } from '@ionic-native/camera';
 import { TabsPage } from '../tabs/tabs';
+import { PacketPage } from '../packet/packet';
 
 @Component({
   selector: 'page-uploadevent',
@@ -31,7 +32,7 @@ export class UploadeventPage {
   }
 
   upload(){
-    this.app.getRootNav().setRoot(TabsPage, 0);
+    this.app.getRootNav().push(PacketPage);
   }
 
   changePicture(){

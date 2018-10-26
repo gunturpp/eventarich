@@ -4,6 +4,7 @@ import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 import { NgForm } from '@angular/forms';
 import { TabsPage } from '../tabs/tabs';
+import { AuthProvider } from "../../providers/auth/auth";
 
 @Component({
   selector: 'page-login',
@@ -14,10 +15,13 @@ export class LoginPage {
   submitted = false;
   lihat = true;
   status = "password";
+  email: any;
+  login: any;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams,
+    public auth: AuthProvider,
     public loadCtrl: LoadingController,
     public alertCtrl: AlertController) {
   }
@@ -83,9 +87,9 @@ export class LoginPage {
       loading.present();    
 
       setTimeout(() => { 
-        this.navCtrl.setRoot(TabsPage)
+        this.auth.emailLogin(this.email,this.login)
         loading.dismiss();     
-      }, 1000);
+      }, 2000);
     }
   }
 
